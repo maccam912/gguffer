@@ -9,4 +9,4 @@ RUN git clone https://github.com/CharlesMod/quantizeHFmodel
 RUN git clone https://github.com/ggerganov/llama.cpp
 RUN /root/.pixi/bin/pixi install
 COPY run.sh run.sh
-ENTRYPOINT ["/bin/bash", "run.sh"]
+ENTRYPOINT ["/bin/bash", "/app/convert/run.sh"]
