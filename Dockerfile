@@ -1,6 +1,6 @@
-FROM fedora
+FROM ubuntu
 
-RUN dnf install -y curl bash git
+RUN apt-get update && apt-get install -y curl bash git
 RUN curl -fsSL https://pixi.sh/install.sh | bash
 WORKDIR /app
 COPY convert convert
