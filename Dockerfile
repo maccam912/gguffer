@@ -7,6 +7,6 @@ COPY convert convert
 WORKDIR /app/convert
 RUN git clone https://github.com/CharlesMod/quantizeHFmodel
 RUN git clone https://github.com/ggerganov/llama.cpp
-RUN cd llama.cpp && make -j
+RUN cd llama.cpp && make quantize -j
 RUN /root/.pixi/bin/pixi install
 ENTRYPOINT ["/root/.pixi/bin/pixi", "run", "python", "./quantizeHFmodel/quantizeHFmodel.py"]
