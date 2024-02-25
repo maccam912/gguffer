@@ -1,0 +1,19 @@
+[project]
+name = "convert"
+version = "0.1.0"
+description = "Add a short description here"
+authors = ["Matt Koski <maccam912@gmail.com>"]
+channels = ["pytorch", "conda-forge"]
+platforms = ["win-64", "linux-64"]
+
+[tasks]
+
+[dependencies]
+pytorch = ">=2.2.1,<2.3"
+cpuonly = ">=2.0,<3"
+torchaudio = ">=2.2.1,<2.3"
+torchvision = ">=0.17.1,<0.18"
+
+[pypi-dependencies]
+huggingface-hub = "*"
+sentencepiece = "*"

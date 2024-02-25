@@ -1,0 +1,29 @@
+<!-- templates/index.gohtml -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Model Queue</title>
+</head>
+<body>
+    <h1>Model Queue</h1>
+    <div style="display: flex;">
+        <div style="flex: 1;">
+            <h2>Queued Models</h2>
+            <ul>
+                {{range .QueuedModels}}
+                <li>{{.Name}} - {{.Timestamp}}</li>
+                {{end}}
+            </ul>
+        </div>
+        <div style="flex: 1;">
+            <h2>Recent Models</h2>
+            <ul>
+                {{range .RecentModels}}
+                <li>{{.Name}} - {{.Status}} - {{.Timestamp}}</li>
+                {{end}}
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
+
